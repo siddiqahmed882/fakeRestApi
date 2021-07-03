@@ -26,7 +26,6 @@ const renderPosts = async (term) => {
     likes.innerText = post.likes + ' likes';
     body.innerText = post.body.slice(0, 150);
     link.href = `./details.html?id=${post.id}`;
-    console.log(blogElement);
     blogContainer.appendChild(blogElement);
   });
 };

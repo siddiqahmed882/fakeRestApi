@@ -9,7 +9,6 @@ window.addEventListener('DOMContentLoaded', () => renderDetails());
 const renderDetails = async () => {
   const res = await fetch(`http://localhost:3000/posts/${id}`);
   const post = await res.json();
-  console.log(post);
   const blog = document.importNode(blogDetailsTemplate.content, true);
   const blogTitle = blog.querySelector('.blog-title');
   const blogBody = blog.querySelector('.blog-body');
@@ -22,6 +21,5 @@ const renderDetails = async () => {
     });
     window.location.replace('/index.html');
   });
-
   detailsContainer.appendChild(blog);
 };
